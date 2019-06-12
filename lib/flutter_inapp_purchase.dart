@@ -257,6 +257,7 @@ class FlutterInappPurchase {
       } catch (err) {
         print('Caused err. Set additionalSuccessPurchaseListenerIOS.');
         print(err);
+        throw err;
         await _addAdditionalSuccessPurchaseListenerIOS();
         _purchaseSub = onAdditionalSuccessPurchaseIOS.listen((data) {
           _removePurchaseListener();
